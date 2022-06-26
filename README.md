@@ -19,3 +19,5 @@ There is "Add to Cart" button. Now we have to wire that button to addItemToCart 
 So that we were able to increment the total items in the cart by one when click on the "Add to Cart" button. 
 
 Then the next thing to do is the releavant product needs to be appear on the cart when clicked on "Add to Cart" button.
+
+Now we have to make sure - and + buttons in CartItem works. 
