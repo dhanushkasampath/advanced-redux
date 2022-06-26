@@ -1,23 +1,37 @@
 import Card from '../UI/Card';
 import classes from './ProductItem.module.css';
 
-const ProductItem = (props) => {
-  const { title, price, description } = props;
+import {useDispatch} from "react-redux";
+import {cartActions} from "../../store/cart-slice";
 
-  return (
-    <li className={classes.item}>
-      <Card>
-        <header>
-          <h3>{title}</h3>
-          <div className={classes.price}>${price.toFixed(2)}</div>
-        </header>
-        <p>{description}</p>
-        <div className={classes.actions}>
-          <button>Add to Cart</button>
-        </div>
-      </Card>
-    </li>
-  );
+//modern JavaScript -> if key name and value are equal, we can ommit the right side
+const ProductItem = (props) => {
+    const dispatch = useDispatch();
+    const {title, price, description, id} = props;
+
+    const addToCartHandler = () => {
+        dispatch(
+            cartActions.addItemToCart({//this is the object we are dispatching
+                id,//modern JavaScript -> if key name and value are equal, we can ommit the right side
+                title,
+                price
+            }));
+    }
+
+    return (
+        <li className={classes.item}>
+            <Card>
+                <header>
+                    <h3>{title}</h3>
+                    <div className={classes.price}>${price.toFixed(2)}</div>
+                </header>
+                <p>{description}</p>
+                <div className={classes.actions}>
+                    <button onClick={addToCartHandler}>Add to Cart</button>
+                </div>
+            </Card>
+        </li>
+    );
 };
 
 export default ProductItem;

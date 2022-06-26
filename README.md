@@ -14,3 +14,5 @@ divide the store into slices
 
 after making the cart button work(toggle the cart), next we have to manage the items in the cart. for that we can 
 add codes to cart-slice.js file
+
+There is "Add to Cart" button. Now we have to wire that button to addItemToCart function in cart-slice.js file
