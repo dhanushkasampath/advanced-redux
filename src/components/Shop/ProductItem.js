@@ -10,7 +10,7 @@ const ProductItem = (props) => {
     const {title, price, description, id} = props;
 
     const addToCartHandler = () => {
-        dispatch(
+        dispatch(//here carAction is the relevant slice
             cartActions.addItemToCart({//this is the object we are dispatching
                 id,//modern JavaScript -> if key name and value are equal, we can ommit the right side
                 title,

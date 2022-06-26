@@ -1,4 +1,4 @@
-//using this file we merge slices into overrall redux store
+//using this file we merge slices into overall redux store
 import {configureStore} from "@reduxjs/toolkit";
 import uiSlice from "./ui-slice";
 import cartSlice from "./cart-slice";

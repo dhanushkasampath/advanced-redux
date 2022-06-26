@@ -4,8 +4,8 @@ import {uiActions} from "../../store/ui-slice";
 import {useDispatch, useSelector} from "react-redux";
 
 const CartButton = (props) => {
-  const dispatch = useDispatch();
-  const cartQuantity = useSelector((state) => state.cart.totalQuantity);
+  const dispatch = useDispatch();//this is used to execute the methods in relevant slices of redux
+  const cartQuantity = useSelector((state) => state.cart.totalQuantity);//this is to access the values of redux store
 
   const toggleCartHandler = () => {
     dispatch(uiActions.toggle());
