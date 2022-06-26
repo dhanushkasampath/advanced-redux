@@ -14,6 +14,7 @@ const Cart = (props) => {
         we want data from redux. for that we use useSelector.*/}
                 {cartItems.map((item) => (
                     <CartItem
+                        key={item.id}
                         item={{title: item.name, quantity: item.quantity, total: item.totalPrice, price: item.price}}
                     />
                 ))}
