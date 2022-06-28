@@ -29,7 +29,7 @@ function App() {
                 title: 'Sending.....',
                 message: 'Sending cart data!'
             }));
-            const response = await fetch('https://react-prep-b4fd7-default-rtdb.firebaseio.com/cart.jso', {
+            const response = await fetch('https://react-prep-b4fd7-default-rtdb.firebaseio.com/cart.json', {
                 method: 'PUT',
                 body: JSON.stringify(cart),
             });
