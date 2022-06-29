@@ -40,7 +40,7 @@ For that there are two ways.
 1. inside the component(e.g. useEffect ()) -> So redux dont know about it.
 2. inside the action creators
 
-let's start with running async code inside our <ProductItem> component.
+***let's start with running async code inside our <ProductItem> component.
 for this there are many options
 1. we can use useSelector and get the cart item and do all the validations done in the reducer and make the POST 
    request. But that is not a good idea.
@@ -65,4 +65,14 @@ useEffects allows you to run side-effects.
 ==================================
 
 if we are in use-effect, we should not ad async.
+
+=================================
+
+***Now lets try how to execute side-effects inside action items on behalf of reducers
+
+###What is a "Thunk"?
+
+A thunk is a function that delays an action until latter.
+An action creator function that does NOT return the action itself but another function which eventually returns the 
+action.
 
