@@ -76,3 +76,5 @@ A thunk is a function that delays an action until latter.
 An action creator function that does NOT return the action itself but another function which eventually returns the 
 action.
 
+===================================
+Now lets create another action creator that fetches data from api call(firebase) when the appliation loads.
